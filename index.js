@@ -12,4 +12,6 @@ let configObj = {
   body: JSON.stringify(formData)
 };
  
-fetch("http://localhost:3000/dogs", configObj);
+fetch("http://localhost:3000/dogs", configObj)
+.then(response => response.json())
+.then(object => console.log(object))
