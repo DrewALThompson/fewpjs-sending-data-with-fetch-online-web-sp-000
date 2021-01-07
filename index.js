@@ -1,5 +1,5 @@
 function submitData(name, email){
-  let data = {
+  let fData = {
     name: name,
     email: email
   };
@@ -7,10 +7,10 @@ function submitData(name, email){
   let configdObj = {
     method: 'Post',
     headers: {
-      headers: "Content-Type":"application/json",
+      "Content-Type":"application/json",
       "Accept":"application/json"
     },
-    body: JSON.stringify(data)
+    body: JSON.stringify(fData)
   };
   
   return fetch('http://localhost:3000/users',configdObj)
