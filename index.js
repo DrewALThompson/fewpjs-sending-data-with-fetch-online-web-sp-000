@@ -1,6 +1,7 @@
 function submitData(name, email){
   let data = {
-    name: name
+    name: name,
+    email: email
   }
   let configdObj = {
     method: 'Post',
