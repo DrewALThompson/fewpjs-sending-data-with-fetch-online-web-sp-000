@@ -21,7 +21,7 @@ function submitData(name, email){
     document.body.appendChild(insertion);
   })
   .catch(error => {
-    let insertion = document.createElement('h2');
+    let insertion = document.createElement('h3');
     insertion.innerHTML = error.message;
     document.body.appendChild(insertion);
   })
