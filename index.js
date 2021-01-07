@@ -1,27 +1,23 @@
 function submitData(name, email){
+  
+  let configdObj = {
+    method: 'Post',
+    headers: {
+      headers: "Content-Type":"application/json",
+      "Accept":"application/json"
+    },
+    body: JSON.stringify({
+      name: name,
+      email: email
+    })
+  };
+  
   return fetch('http://localhost:3000/users',configdObj)
   .then(response => response.json())
-  .then(json => )
-}
-
-let formData = {
-  dogName: "Byron",
-  dogBreed: "Poodle"
-};
- 
-let configObj = {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-    "Accept": "application/json"
-  },
-  body: JSON.stringify(formData)
-};
- 
-fetch("http://localhost:3000/dogs", configObj)
-.then(response => response.json())
-.then(object => console.log(object))
-.catch(function(error) {
-    alert("Bad things! Ragnarők!");
+  .then(json => console.log(json))
+  .catch(error => {
+    alert("Something funky happened, Cool Cat");
     console.log(error.message);
-  });
+  })
+}
+ 
