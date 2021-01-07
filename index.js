@@ -21,8 +21,9 @@ function submitData(name, email){
     document.body.appendChild(insertion);
   })
   .catch(error => {
-    alert("Something funky happened, Cool Cat");
-    console.log(error.message);
+    let insertion = document.createElement('h2');
+    insertion.innerHTML = error.message;
+    document.body.appendChild(insertion);
   })
 }
  
