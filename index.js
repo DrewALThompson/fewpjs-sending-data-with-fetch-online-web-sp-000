@@ -18,7 +18,7 @@ function submitData(name, email){
   .then(json => {
     let insertion = document.createElement('h2');
     insertion.innerHTML = json.id;
-    
+    document.body.appendChild(insertion);
   })
   .catch(error => {
     alert("Something funky happened, Cool Cat");
