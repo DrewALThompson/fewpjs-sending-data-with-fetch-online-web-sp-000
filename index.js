@@ -1,3 +1,7 @@
+function submitData(name, email){
+  
+}
+
 let formData = {
   dogName: "Byron",
   dogBreed: "Poodle"
