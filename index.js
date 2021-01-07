@@ -1,5 +1,7 @@
 function submitData(name, email){
-  
+  return fetch('http://localhost:3000/users',configdObj)
+  .then(response => response.json())
+  .then(json => )
 }
 
 let formData = {
