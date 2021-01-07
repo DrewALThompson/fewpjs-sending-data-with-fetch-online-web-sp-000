@@ -15,7 +15,9 @@ function submitData(name, email){
   
   return fetch('http://localhost:3000/users',configdObj)
   .then(response => response.json())
-  .then(json => console.log(json))
+  .then(json => {
+    json.
+  })
   .catch(error => {
     alert("Something funky happened, Cool Cat");
     console.log(error.message);
